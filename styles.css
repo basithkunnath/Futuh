@@ -726,6 +726,14 @@ body {
   margin: 0;
 }
 
+
+.form-label {
+  color: #8B4513;
+}
+.form-control {
+  border-color: #8B4513;
+}
+
 /* Custom CSS for Address, Location, and Contact Number */
 .contact-info {
 text-align: center;
