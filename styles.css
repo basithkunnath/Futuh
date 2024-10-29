@@ -1,0 +1,810 @@
+/* General Styles */
+body {
+  font-family: "Luckiest Guy", cursive;
+  font-family: "Domine", serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-custom {
+  background-color: #8B4513;
+}
+
+.nav-link {
+  margin-right: 15px;
+  color: #ffffff;
+
+}
+
+.button-book {
+  background-color: #ffffff;
+  color: #8B4513;
+  border-radius: 5%;
+}
+
+
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* Hamburger Icon Lines */
+.toggler-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+  border-radius: 2px;
+  
+}
+
+/* Animation to "X" on open */
+.navbar-toggler.collapsed .toggler-icon:nth-child(1) {
+  transform: rotate(0deg) translate(0, 0);
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:not(.collapsed) .toggler-icon:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:not(.collapsed) .toggler-icon:nth-child(2) {
+  opacity: 0;
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:not(.collapsed) .toggler-icon:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  border: none;
+  outline: none;
+}
+
+/* Remove outline on the navbar-toggler button */
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none; /* Removes any additional focus shadow */
+}
+
+
+.hero-section {
+  height: 86vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.hero-section h1,
+.hero-section p {
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  transform: translateY(-20px);
+  /* Slightly up */
+  font-family: "Luckiest Guy", cursive;
+
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  transform: translateY(20px);
+  /* Slightly down */
+  
+  font-weight: 250;
+}
+
+/* Animation Active Class */
+.carousel-item.active .animate-text {
+  opacity: 1;
+  /* Fade in */
+  transform: translateY(0);
+  /* Reset position */
+}
+
+.carousel-item.active h1 {
+  animation: slideDown 1s ease-out;
+}
+
+.carousel-item.active p {
+  animation: slideUp 1s ease-out;
+}
+
+/* Keyframes for Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .button-book {
+    width: 100px;
+    padding: 8px;
+  }
+}
+
+
+
+
+/* Hero Section */
+.fit-hero-section {
+  padding: 20px;
+}
+
+/* Hero Title */
+.fit-title {
+  font-weight: bold;
+  color: #8B4513;
+}
+
+/* Hero Description */
+.fit-description {
+  font-size: 18px;
+  color: #8B4513;
+}
+
+/* Logos Section */
+.fit-logo-section {
+  margin-bottom: 20px;
+}
+
+.fit-logo-col {
+  margin-bottom: 15px;
+}
+
+.fit-logo {
+  width: 100%;
+  height: auto;
+}
+
+/* Button Styling */
+.fit-read-more-btn {
+  border-color: #8B4513;
+  color: #8B4513;
+}
+
+.fit-read-more-btn:hover {
+  background-color: #8B4513;
+  color: #fff;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+.section-title {
+  color: #8B4513;
+  
+}
+
+.why-travel-section .travel-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.why-travel-section .travel-card h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8B4513;
+  
+}
+
+.why-travel-section .icon {
+  font-size: 3rem;
+  color :#8B4513 ;
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .why-travel-section .travel-card h5 {
+    font-size: 0.875rem;
+  }
+
+  .why-travel-section .icon {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+.trip-card img {
+  object-fit: cover;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animation when hovering or touching the image */
+.trip-card:hover img,
+.trip-card.touch-active img {
+  transform: translateY(-10px);
+}
+
+.trip-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #8B4513;
+  
+  
+}
+
+.trip-card h5 {
+  color: #fff;
+}
+
+.trip-card p {
+  color: #fff;
+}
+
+
+.card-title {
+  font-size: 1.5rem;
+  color: #fafafa;
+
+  
+}
+
+.explore-button {
+  background-color: #fff;
+  color: #8B4513;
+}
+
+.explore-button:hover {
+  color: #fff;
+}
+
+.trip-container {
+  margin-top: 50px;
+  
+}
+
+
+
+
+
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #8B4513;
+  /* Same as the image's font color */
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #8B4513;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.compass-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-outline {
+  color: #8B4513;
+  border-color: #8B4513;
+}
+
+.btn-outline:hover {
+  background-color: #8B4513;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .compass-img {
+    max-width: 250px;
+    margin-bottom: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+.section-title {
+  color: #8B4513;
+  /* Dark brown color */
+  font-size: 3rem;
+}
+
+.destination-image {
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.image-title {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+  z-index: 10;
+}
+
+.destination-image:hover {
+  transform: scale(1.05);
+  /* Zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .image-title {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+.testimonial-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.testimonial-header {
+  margin-bottom: 40px;
+}
+
+.testimonial-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #8B4513;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.testimonial-card .card-text {
+  font-size: 14px;
+  color: #fff;
+}
+
+
+
+
+
+
+/*About Page */
+
+.about-us p {
+  font-size: 1.24rem;
+  color: #8B4513;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #8B4513;
+  /* Deep brownish color for title */
+}
+
+.subheading {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #8B4513;
+  /* Another brownish color for subheadings */
+}
+
+.value-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color :#8B4513 ;
+}
+
+
+
+.btn-hover {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-hover:hover {
+  background-color: #8B4513;
+  transform: translateY(-5px);
+}
+
+/* Images styling */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1.5rem;
+  }
+
+  .value-title {
+    font-size: 1.3rem;
+  }
+}
+
+
+/*Packages Page */
+
+/* General Styles */
+
+
+.packages-section {
+  background-color: #fff;
+}
+
+.packages-section h5 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  
+}
+
+
+
+/* Card Customization */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+  background-color: #8B4513;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.card-text {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+/* Button Styling */
+.btn {
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+  color: #8B4513;
+}
+
+.btn-primary:hover {
+  background-color: #8B4513;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-outline-primary {
+  color: #ffffff;
+  border-color: #ffffff;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ffffff;
+  color: #8B4513;
+  border-color: #8B4513;
+}
+
+/* AOS Customization */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .card-img-top {
+    height: 200px;
+  }
+}
+
+
+/* Details Page */
+
+
+
+
+
+
+/* Gallery Page */
+
+
+.header-section {
+  background: linear-gradient(to bottom, #8B4513, #ffffff);
+}
+
+.header-section h1 {
+  color: #411f07;
+}
+
+.btn-dark {
+  background-color: #8B4513;
+  border-color: #8B4513;
+}
+
+.btn-dark:hover {
+    background: none;
+    border-color: #8B4513;
+    color: #8B4513;
+}
+
+.gallery-section img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-section {
+  background-image: url('turkey.jpg');
+  background-size: cover;
+  background-position: center;
+  color:#ffffff ;
+}
+
+@media (max-width: 768px) {
+  .header-section h1 {
+      font-size: 2rem;
+  }
+
+  .gallery-section img {
+      height: auto;
+  }
+}
+
+
+/* Details Page */
+
+
+
+
+/* Contact Us Page */
+
+
+
+ /* Contact Us Page */
+ .contact-section {
+  background-color: #ffffff;
+  padding: 50px 0;
+  font-size: 1.2rem;
+  
+}
+
+.contact-section form input,form textarea {
+  border-color: #4a3607;
+}
+
+.contact-header {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #8B4513;
+}
+.contact-subheader {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #8B4513;
+}
+.whatsapp-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10%;
+  font-size: 34px;
+  z-index: 1000;
+}
+.submit-button {
+  background-color: #8B4513;
+  border: solid #4a3607;
+  color: #fff;
+  border: none;
+}
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+  color: #fafafa;
+}
+.contact-info p {
+  margin: 0;
+}
+
+/* Custom CSS for Address, Location, and Contact Number */
+.contact-info {
+text-align: center;
+margin-top: 50px;
+padding: 20px;
+background-color: #8B4513;
+border-radius: 8px;
+color: #ffffff;
+}
+
+.contact-info h4 {
+font-size: 1.8rem;
+font-weight: 600;
+margin-bottom: 15px;
+color: #ffffff;
+}
+
+.contact-info p, .contact-info a {
+font-size: 1.2rem;
+color: #ffffff;
+margin: 5px 0;
+}
+
+.contact-info a {
+color: #ffffff;
+text-decoration: none;
+}
+
+.contact-info a:hover {
+color: #ffffff;
+text-decoration: underline;
+}
+
+.contact-info i {
+color: #ffffff;
+margin-right: 10px;
+}
+
+
+
+
+
+
+.footer {
+  background-color: #8B4513;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer .footer-logo img {
+  max-width: 250px;
+
+}
+
+.footer h6 {
+  font-weight: bold;
+  color: #fff;
+
+
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons i {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #fff;
+  margin-top: 30px;
+}
