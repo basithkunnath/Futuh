@@ -670,20 +670,26 @@ body {
 .explore-section h2 {
   font-weight: bold;
   margin-top: 20px;
+  font-size: 45px;
 }
 .explore-section p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
 }
 .booking-form {
   background: linear-gradient(to bottom right, #8B4513, #000000);
-  padding: 20px;
+  padding: 60px;
   border-radius: 10px;
   color: #fff;
+  
 }
 .booking-form h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+}
+
+.booking-form .form-label {
+  color: #ffffff;
 }
 
 .btn-success {
@@ -698,21 +704,32 @@ body {
 
 .accordion-button::after {
   font-size: 1rem;
+  
 }
+
+.feature-list h3 {
+  font-size: 40px;
+}
+
 .feature-list {
   margin-top: 20px;
 }
 .feature-list ul {
   padding-left: 15px;
-  color: #555;
+  color: #000000;
 }
 .feature-list ul li {
   margin-bottom: 10px;
   font-size: 16px;
+  font-size: 20px;
 }
 
 .itinerary-section {
   padding: 90px;
+}
+
+.itinerary-section h3 {
+  font-size: 40px;
 }
 
 @media (max-width: 768px) {
