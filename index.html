@@ -26,7 +26,7 @@
   <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="futuhlogo.png" alt="Futuh International Logo" width="200" height="auto">
+        <img src="futuhlogo.png" alt="Futuh International Logo" width="150" height="auto">
       </a>
 
        <!-- Hamburger / Close Icon Button -->
@@ -62,37 +62,50 @@
   </nav>
 
   <!-- Carousel -->
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
-    <div class="carousel-inner">
-      <!-- First Slide -->
-      <div class="carousel-item active">
-        <div class="hero-section" style="background-image: url('turkey.jpg');">
-          <div class="container text-center">
-            <h1 class="display-4 animate-text">Turkey</h1>
-            <p class="lead animate-text">Istanbul | Cappadocia | Ankara | Pamukkale | Konya | Bursa</p>
-          </div>
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <!-- First Slide -->
+    <div class="carousel-item active">
+      <div class="hero-section" style="background-image: url('turkey.jpg');">
+        <div class="container text-center">
+          <h1 class="display-4 animate-text">Turkey</h1>
+          <p class="lead animate-text">Istanbul | Cappadocia | Ankara | Pamukkale | Konya | Bursa</p>
         </div>
       </div>
-      <!-- Second Slide -->
-      <div class="carousel-item">
-        <div class="hero-section" style="background-image: url('egypt.jpg');">
-          <div class="container text-center">
-            <h1 class="display-4 animate-text">Egypt</h1>
-            <p class="lead animate-text">Cairo | Alexandria | Dasooq | Tanta</p>
-          </div>
+    </div>
+    <!-- Second Slide -->
+    <div class="carousel-item">
+      <div class="hero-section" style="background-image: url('egypt.jpg');">
+        <div class="container text-center">
+          <h1 class="display-4 animate-text">Egypt</h1>
+          <p class="lead animate-text">Cairo | Alexandria | Dasooq | Tanta</p>
         </div>
       </div>
-      <!-- Third Slide -->
-      <div class="carousel-item">
-        <div class="hero-section" style="background-image: url('moroco.jpg');">
-          <div class="container text-center">
-            <h1 class="display-4 animate-text">Moroco</h1>
-            <p class="lead animate-text">Fez | Marrakesh | Casablanca | Meknes | Rabat | Chefchaouen</p>
-          </div>
+    </div>
+    <!-- Third Slide -->
+    <div class="carousel-item">
+      <div class="hero-section" style="background-image: url('moroco.jpg');">
+        <div class="container text-center">
+          <h1 class="display-4 animate-text">Moroco</h1>
+          <p class="lead animate-text">Fez | Marrakesh | Casablanca | Meknes | Rabat | Chefchaouen</p>
         </div>
       </div>
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 
   <!-- Hero Section -->
@@ -101,16 +114,16 @@
 
       <!-- Logo Section -->
       <div class="row justify-content-center fit-logo-section">
-        <div class="col-4 col-md-2 fit-logo-col" data-aos="fade-in" data-aos-duration="1000">
+        <div class="col-3 col-md-2 fit-logo-col" data-aos="fade-in" data-aos-duration="1000">
           <img src="mmkclogo.png" alt="Logo 1" class="img-fluid fit-logo">
         </div>
-        <div class="col-4 col-md-2 fit-logo-col" data-aos="fade-in" data-aos-duration="1000">
+        <div class="col-3 col-md-2 fit-logo-col" data-aos="fade-in" data-aos-duration="1000">
           <img src="floho.png" alt="Logo 2" class="img-fluid fit-logo">
         </div>
       </div>
 
       <!-- Title -->
-      <h1 class="fit-title mt-4" data-aos="fade-up" data-aos-duration="1000">Welcome To Futuh International Tours And
+      <h1 class="fit-title mt-4">Welcome To Futuh International Tours And
         Travels</h1>
 
       <!-- Description -->
@@ -169,11 +182,13 @@
         <!-- First Trip Card -->
         <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card trip-card h-100">
-            <img src="baghdad.jpg" class="card-img-top trip-image" alt="October in Baghdad">
+            <div class="trip-image-container">
+              <img src="baku.jpg" class="trip-image card-img-top" alt="October in Baghdad" width="300" height="50">
+            </div>
             <div class="card-body trip-details">
               <h5 class="card-title trip-title">October in Baghdad</h5>
               <p class="card-text trip-description">warm days fade into cool, breezy nights</p>
-              <a href="details.html" class="btn explore-button">Explore Now</a>
+              <a href="baku.jpg" class="btn explore-button">Explore Now</a>
             </div>
           </div>
         </div>
@@ -181,7 +196,9 @@
          <!-- First Trip Card -->
          <div class="col-md-4 mb-4" data-aos="fade-up">
           <div class="card trip-card h-100">
-            <img src="egypt.jpg" class="card-img-top trip-image" alt="October in Baghdad">
+            <div class="trip-image-container">
+            <img src="baku.jpg" class="card-img-top trip-image" alt="October in Baghdad" width="100" height="100">
+          </div>
             <div class="card-body trip-details">
               <h5 class="card-title trip-title">Egypt Journey</h5>
               <p class="card-text trip-description">warm days fade into cool, breezy nights</p>
@@ -193,7 +210,9 @@
         <!-- Third Trip Card -->
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
           <div class="card trip-card h-100">
-            <img src="morocotour.jpg" class="card-img-top trip-image" alt="Morocco Trip">
+            <div class="trip-image-container">
+            <img src="baku.jpg" class="card-img-top trip-image" alt="Morocco Trip" width="100" height="100">
+          </div>
             <div class="card-body trip-details">
               <h5 class="card-title trip-title">Morocco Journey</h5>
               <p class="card-text trip-description">Discover beautiful landmarks.</p>
@@ -206,13 +225,35 @@
   </section>
 
 
+  <section class="umrah-banner">
+    <div class="banner-container py-3">
+        <div class="banner-row row">
+            <!-- Text Section - 50% width -->
+            <div class="banner-text col-md-6 d-flex flex-column justify-content-center"data-aos="fade-right" >
+                <h1 class="banner-title">UMRAH PACKAGE</h1>
+                <p class="banner-subtitle">Let's complete your worship with Futuh International</p>
+                <div class="price-info">
+                    <p class="price-label">Starting from:</p>
+                    <span class="price-amount">$76,000 /person</span>
+                </div>
+            </div>
+
+            <!-- Image Section - 50% width -->
+            <div class="banner-image col-md-6" data-aos="fade-left" >
+                <img src="ui.jpg" alt="Kaaba" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+
   <!-- About Us Section -->
   <section class="about-us-section py-5">
     <div class="container">
       <div class="row align-items-center">
         <!-- Image Section -->
-        <div class="col-md-6 text-center" data-aos="fade-right">
-          <img src="aboutpng (2).png" alt="Compass Icon" class="compass-img">
+        <div class="col-md-6 text-center" data-aos="fade-right" >
+          <img src="aboutpng (2).png" alt="Compass Icon" class="compass-img animated">
         </div>
         <!-- Content Section -->
         <div class="col-md-6" data-aos="fade-left">
@@ -239,7 +280,7 @@
 
 
 
-  <section class="container text-center my-5">
+  <section class="container destinations-section text-center my-5">
     <h1 class="mb-5 fw-bold section-title" data-aos="fade-up">Our Destinations</h1>
     <div class="row mt-4">
       <!-- First Row of Images -->
@@ -316,23 +357,23 @@
   </a>
 
   <footer class="footer">
-    <div class="container">
-      <div class="row">
+    <div class="container ">
+      <div class="row footer-container">
         <!-- Logo and Social Media -->
         <div class="col-md-4 text-center text-md-start">
           <div class="footer-logo">
             <img src="futuhlogo.png" alt="Futuh Logo" class="img-fluid">
           </div>
-
-          <div class="social-icons">
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-whatsapp"></i></a>
-          </div>
+          
+          <p class="footer-description">
+            Futuh Holidays - Your trusted travel partner for unforgettable experiences. Explore the world <br> our unique and affordable.
+          </p>
+          
+         
         </div>
-
+  
         <!-- Quick Links -->
-        <div class="col-md-4 text-center text-md-start">
+        <div class="col-md-2 text-center text-md-start quick-links">
           <h6>Quick Links</h6>
           <ul class="list-unstyled">
             <li><a href="about.html">About Us</a></li>
@@ -342,22 +383,40 @@
           </ul>
         </div>
 
+
+         <!-- Quick Links -->
+         <div class="col-md-2 text-center text-md-start quick-links">
+          <h6>Tour Packages</h6>
+          <ul class="list-unstyled">
+            <li><a href="about.html">Egypt</a></li>
+            <li><a href="packages.html">Turkey</a></li>
+            <li><a href="gallery.html">Moroco</a></li>
+            <li><a href="contactus.html">Uzbekistan</a></li>
+          </ul>
+        </div>
+  
         <!-- Contact Info -->
-        <div class="col-md-4 text-center text-md-start">
+        <div class="col-md-2 text-center text-md-start">
           <h6>Call Us</h6>
           <p>+91 9947055743</p>
-          <h6>E Mail Us</h6>
+          <h6>Email Us</h6>
           <p>futuhinternational@gmail.com</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a> 
+          </div>
         </div>
       </div>
-
+  
       <!-- Footer Bottom -->
-      <div class="footer-bottom">
+      <div class="footer-bottom text-center mt-3">
         <p>Copyright © 2024 Futuh Holidays. All Rights Reserved. Designed by Basith Kunnath</p>
       </div>
     </div>
   </footer>
-
+  
 
 
   <!-- Scripts -->

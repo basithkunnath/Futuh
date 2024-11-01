@@ -5,20 +5,19 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  
 }
 
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
 
 .navbar-custom {
   background-color: #8B4513;
+  padding: 15px;
 }
 
 .nav-link {
   margin-right: 15px;
   color: #ffffff;
+  font-size: 1.1rem;
 
 }
 
@@ -33,13 +32,14 @@ body {
 .navbar-toggler {
   border: none;
   outline: none;
+  
 }
 
 /* Hamburger Icon Lines */
 .toggler-icon {
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 27px;
+  height: 3.5px;
   background-color: white;
   margin: 5px 0;
   transition: 0.4s;
@@ -154,8 +154,36 @@ body {
   }
 }
 
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated {
+  animation: moveUpDown 2s infinite ease-in-out;
+}
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
+
+  .nav-link {
+    margin-left: 18px;
+  }
+
+  .hero-section {
+    height: 43vh;
+  }
+
+
   .hero-section h1 {
     font-size: 2.5rem;
   }
@@ -166,17 +194,16 @@ body {
 
   .button-book {
     width: 100px;
-    padding: 8px;
+    padding: 5px;
   }
+
+
 }
 
 
 
 
 /* Hero Section */
-.fit-hero-section {
-  padding: 20px;
-}
 
 /* Hero Title */
 .fit-title {
@@ -192,16 +219,18 @@ body {
 
 /* Logos Section */
 .fit-logo-section {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .fit-logo-col {
-  margin-bottom: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 .fit-logo {
-  width: 100%;
+  width: 80%;
   height: auto;
+  
 }
 
 /* Button Styling */
@@ -261,25 +290,36 @@ body {
 }
 
 
-
+.upcoming-section {
+  padding: 0px 20px;
+}
 
 .trip-card img {
   object-fit: cover;
   height: 100%;
-  transition: transform 0.3s ease-in-out;
 }
 
 /* Animation when hovering or touching the image */
-.trip-card:hover img,
-.trip-card.touch-active img {
-  transform: translateY(-10px);
+
+/* Zoom effect for the trip image */
+.trip-image-container {
+  overflow: hidden; /* Ensures the image does not overflow outside the container */
 }
+
+.trip-image {
+  transition: transform 0.3s ease; /* Smooth transition for zoom */
+  
+}
+
+.trip-image-container:hover .trip-image,
+.trip-image-container:active .trip-image {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
 
 .trip-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #8B4513;
-  
-  
 }
 
 .trip-card h5 {
@@ -314,8 +354,93 @@ body {
 
 
 
+/* Umrah Banner Section */
+.umrah-banner {
+  padding: 15px;
+  max-width: auto; /* Set a maximum width for the banner */
+  margin: 80px;
+}
 
+.banner-container {
+  max-width: 100%;
+}
 
+/* Text Content Styling */
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #411f07;
+  margin-bottom: 5px;
+}
+
+.banner-subtitle {
+  font-size: 1.8rem;
+  color: #411f07;
+  margin-bottom: 10px;
+}
+
+.price-info {
+  background-color: #8B4513;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.price-label {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.price-amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Image Content Styling */
+.banner-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .banner-row {
+      flex-direction: column;
+  }
+  .banner-text, .banner-image {
+      flex: 100%; /* Make both sections take full width on small screens */
+  }
+  .banner-title {
+      font-size: 2rem;
+  }
+  .banner-subtitle {
+      font-size: 1.1rem;
+  }
+  .price-amount {
+      font-size: 1.4rem;
+  }
+  .umrah-banner {
+    margin: 18px;
+  }
+}
+
+.about-us-section {
+  padding: 0px 20px;
+}
 
 .section-title {
   font-size: 2rem;
@@ -349,7 +474,7 @@ body {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .compass-img {
-    max-width: 250px;
+    max-width: 100%;
     margin-bottom: 2rem;
   }
 
@@ -359,7 +484,9 @@ body {
 }
 
 
-
+.destinations-section {
+  padding: 0px 30px;
+}
 
 .section-title {
   color: #8B4513;
@@ -460,6 +587,10 @@ body {
 
 /*About Page */
 
+.about-us-page {
+  padding: 0px 30px;
+}
+
 .about-us p {
   font-size: 1.24rem;
   color: #8B4513;
@@ -525,6 +656,7 @@ body {
 
 .packages-section {
   background-color: #fff;
+  padding: 0px 25px;
 }
 
 .packages-section h5 {
@@ -540,6 +672,11 @@ body {
   border-radius: 12px;
   transition: transform 0.3s ease-in-out;
   background-color: #8B4513;
+  
+}
+
+.package-card {
+  margin-bottom: 40px;
 }
 
 .card:hover {
@@ -552,6 +689,8 @@ body {
   height: 250px;
   object-fit: cover;
 }
+
+
 
 .card-title {
   font-size: 1.5rem;
@@ -573,6 +712,7 @@ body {
   border-color: #ffffff;
   transition: background-color 0.3s ease-in-out;
   color: #8B4513;
+  
 }
 
 .btn-primary:hover {
@@ -628,12 +768,18 @@ body {
 .btn-dark {
   background-color: #8B4513;
   border-color: #8B4513;
+  
 }
 
 .btn-dark:hover {
     background: none;
     border-color: #8B4513;
     color: #8B4513;
+    
+}
+
+.gallery-section {
+  padding: 0px 25px;
 }
 
 .gallery-section img {
@@ -661,6 +807,9 @@ body {
 
 /* Details Page */
 
+.deatails-section {
+  padding: 0px 25px;
+}
 
 .gallery-image {
   border-radius: 3px;
@@ -725,7 +874,9 @@ body {
 }
 
 .itinerary-section {
-  padding: 90px;
+  padding-bottom: 80px;
+  padding: 60px;
+  padding-top: 0%;
 }
 
 .itinerary-section h3 {
@@ -750,7 +901,7 @@ body {
 
  .contact-section {
   background-color: #ffffff;
-  padding: 50px 0;
+  padding: 50px 20px;
   font-size: 1.2rem;
   
 }
@@ -850,25 +1001,31 @@ margin-right: 10px;
 
 .footer {
   background-color: #8B4513;
-  padding-top: 40px;
+  padding-top: 80px;
   color: #fff;
+  justify-content: center;
+  
+}
+
+.footer-container {
+  padding-left: 100px;
 }
 
 .footer .footer-logo img {
-  max-width: 250px;
-
+  max-width: 180px;
+  margin-bottom: 20px;
 }
 
 .footer h6 {
   font-weight: bold;
   color: #fff;
-
-
+  font-size: 1.2rem;
 }
 
 .footer a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .footer a:hover {
@@ -876,9 +1033,10 @@ margin-right: 10px;
 }
 
 .footer .social-icons i {
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 15px;
   color: #fff;
+  margin-bottom: 30px;
 }
 
 .footer-bottom {
@@ -886,4 +1044,13 @@ margin-right: 10px;
   padding: 20px 0;
   border-top: 1px solid #fff;
   margin-top: 30px;
+
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding-left: 0;
+  }
+
 }
