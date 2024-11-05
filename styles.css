@@ -599,7 +599,7 @@ body {
   padding: 0px 30px;
 }
 
-.about-us p {
+.about-us-page p {
   font-size: 1.24rem;
   color: #8B4513;
 }
@@ -828,10 +828,12 @@ body {
   font-weight: bold;
   margin-top: 20px;
   font-size: 45px;
+  color: #8B4513;
 }
 .explore-section p {
   font-size: 20px;
   line-height: 1.7;
+  color: #8B4513;
 }
 .booking-form {
   background: linear-gradient(to bottom right, #8B4513, #000000);
@@ -867,6 +869,7 @@ body {
 
 .feature-list h3 {
   font-size: 40px;
+  color: #8B4513;
 }
 
 .feature-list {
@@ -874,7 +877,7 @@ body {
 }
 .feature-list ul {
   padding-left: 15px;
-  color: #000000;
+  color: #8B4513;
 }
 .feature-list ul li {
   margin-bottom: 10px;
@@ -886,10 +889,20 @@ body {
   padding-bottom: 80px;
   padding: 60px;
   padding-top: 0%;
+  color: #8B4513;
 }
 
 .itinerary-section h3 {
   font-size: 40px;
+  color: #8B4513;
+}
+
+.accordion-button {
+  color: #8B4513;
+}
+
+.accordion-item {
+  color: #8B4513;
 }
 
 @media (max-width: 768px) {
