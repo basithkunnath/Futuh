@@ -355,74 +355,87 @@ body {
 
 
 /* Banner Section Styles */
-.banner-section {
- 
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  margin-left: 100px;
-  margin-right: 100px;
 
-  border-radius: 20px;
-  
-  padding: 0;
-  background-color: #ffffff;
-  
-}
+/* Banner Styles */
 
-.packages-content {
-  margin-top: 100px;
-}
 
-.package-details {
-  margin-top: 50px;
-}
-
-/* Kaaba Image */
-.kaaba-img img {
-  max-width: 650px;
-  height: auto;
-}
-
-.next-umrah {
-  background: #8B4513;
+.umrah-banner {
+  background-image: url('hik.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px;
+  margin-top: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #ffffff;
-  padding: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 30px;
+  max-width: 100%;
+  position: relative;
 }
 
-.umrah-heading {
+.umrah-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  z-index: 1;
+}
+
+.content, .banner-footer {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.banner-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.banner-description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #8B4513;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-secondary:hover{
+  background-color: #ffffff;
   color: #8B4513;
 }
 
-.fw-bold {
-  font-size: 3rem;
-}
-
-h1, h2, h4 {
-  font-weight: bold;
-}
-
-.list-unstyled li {
-  font-size: 0.9rem;
-  color: #8B4513;
+.banner-footer {
+  font-size: 0.875rem;
+  color: #e0e0e0;
+  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
-  .banner-section {
-    margin: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    
+  .banner-title {
+      font-size: 2rem;
   }
-  .kaaba-img img {
-    width: 400px;
-    margin-right: 60px;
+  .banner-description {
+      font-size: 0.875rem;
   }
-
 }
+
 
 
 
